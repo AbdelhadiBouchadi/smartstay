@@ -3,7 +3,7 @@ function validateForm() {
   const password = document.getElementById('password').value;
 
   if (!email || !password) {
-    alert('Please fill all the required fields');
+    alert('One of the credentials is missing');
     return false;
   }
 

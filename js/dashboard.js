@@ -4,7 +4,7 @@ function cancelBooking(bookingId) {
     return;
   }
 
-  // Send AJAX request to cancel booking
+  // Send AJAX request to cancel booking independently of Prototype.js library
   const xhr = new XMLHttpRequest();
   xhr.open('POST', './php/cancelBooking.php', true);
   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -29,6 +29,7 @@ function filterBookings() {
   const status = document.getElementById('statusFilter').value;
   console.log('Selected status:', status);
 
+  // Send AJAX request to fetch bookings based on the selected status independently of Prototype.js library
   const xhr = new XMLHttpRequest();
   xhr.open('POST', './php/fetchBookings.php', true);
   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
